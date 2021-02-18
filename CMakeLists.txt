@@ -261,7 +261,7 @@ if (MSVC)
 	target_compile_options(RmlCore PUBLIC -DRMLUI_STATIC_LIB)
 endif ()
 
-target_include_directories(RmlCore PUBLIC "Source/Core" Include ../freetype/include)
+target_include_directories(RmlCore PUBLIC "Source/Core" Include ../../freetype/include)
 target_link_libraries(RmlCore PUBLIC ../freetype/lib/freetype)
 
 #target_link_libraries(RmlLua PUBLIC lua_static)
