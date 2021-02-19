@@ -261,10 +261,10 @@ if (MSVC)
 	target_compile_options(RmlCore PUBLIC -DRMLUI_STATIC_LIB)
 endif ()
 
-target_include_directories(RmlCore PUBLIC "Source/Core" Include ../../freetype/include)
-target_link_libraries(RmlCore PUBLIC ../freetype/lib/freetype)
+target_include_directories(RmlCore PUBLIC "Source/Core" Include)
+#target_link_libraries(RmlCore PUBLIC ../freetype/lib/freetype)
 
-#target_link_libraries(RmlLua PUBLIC lua_static)
+target_link_libraries(RmlCore PUBLIC freetype)
 
 set_target_properties(RmlLua PROPERTIES
 		CXX_STANDARD 20
