@@ -187,6 +187,8 @@ add_library(RmlCore STATIC
 		Source/Core/PropertyDictionary.cpp
 		Source/Core/PropertyParserAnimation.cpp
 		Source/Core/PropertyParserColour.cpp
+		Source/Core/PropertyParserDecorator.cpp
+		Source/Core/PropertyParserFontEffect.cpp
 		Source/Core/PropertyParserKeyword.cpp
 		Source/Core/PropertyParserNumber.cpp
 		Source/Core/PropertyParserRatio.cpp
