@@ -47,20 +47,20 @@ add_library(RmlLua STATIC
 		Source/Lua/Vector2i.cpp
 		)
 
-target_compile_features(RmlLua PUBLIC cxx_std_20)
+target_compile_features(RmlLua PUBLIC cxx_std_17)
 #target_compile_options(RXUtil PUBLIC -DRX_ASSET_DIR="${PROJECT_SOURCE_DIR}/assets")
 
 if (MSVC)
 	target_compile_options(RmlLua PRIVATE /W4 /wd4275 /wd4305 /wd4310 -D_CRT_SECURE_NO_WARNINGS -D_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING -DWIN32_LEAN_AND_MEAN)
-	target_compile_options(RmlLua PUBLIC -DRMLUI_STATIC_LIB)
 endif ()
+target_compile_options(RmlLua PUBLIC -DRMLUI_STATIC_LIB)
 
 target_include_directories(RmlLua PUBLIC "Source/Lua" Include)
 
 target_link_libraries(RmlLua PUBLIC lua_static)
 
 set_target_properties(RmlLua PROPERTIES
-		CXX_STANDARD 20
+		CXX_STANDARD 17
 		CXX_EXTENSIONS ON
 		)
 
@@ -255,13 +255,13 @@ add_library(RmlCore STATIC
 		Source/Core/FontEngineDefault/FreeTypeInterface.cpp
 		)
 
-target_compile_features(RmlCore PUBLIC cxx_std_20)
+target_compile_features(RmlCore PUBLIC cxx_std_17)
 #target_compile_options(RXUtil PUBLIC -DRX_ASSET_DIR="${PROJECT_SOURCE_DIR}/assets")
 
 if (MSVC)
 	target_compile_options(RmlCore PRIVATE /W4 /wd4275 /wd4305 /wd4310 -D_CRT_SECURE_NO_WARNINGS -D_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING -DWIN32_LEAN_AND_MEAN)
-	target_compile_options(RmlCore PUBLIC -DRMLUI_STATIC_LIB)
 endif ()
+target_compile_options(RmlCore PUBLIC -DRMLUI_STATIC_LIB)
 
 target_include_directories(RmlCore PUBLIC "Source/Core" Include)
 #target_link_libraries(RmlCore PUBLIC ../freetype/lib/freetype)
@@ -269,7 +269,7 @@ target_include_directories(RmlCore PUBLIC "Source/Core" Include)
 target_link_libraries(RmlCore PUBLIC freetype)
 
 set_target_properties(RmlLua PROPERTIES
-		CXX_STANDARD 20
+		CXX_STANDARD 17
 		CXX_EXTENSIONS ON
 		)
 
@@ -289,14 +289,14 @@ target_compile_features(RmlDebugger PUBLIC cxx_std_20)
 
 if (MSVC)
 	target_compile_options(RmlDebugger PRIVATE /W4 /wd4275 /wd4305 /wd4310 -D_CRT_SECURE_NO_WARNINGS -D_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING -DWIN32_LEAN_AND_MEAN)
-	target_compile_options(RmlDebugger PUBLIC -DRMLUI_STATIC_LIB)
 endif ()
 
+target_compile_options(RmlDebugger PUBLIC -DRMLUI_STATIC_LIB)
 target_include_directories(RmlDebugger PUBLIC "Source/Core" Include)
 
 #target_link_libraries(RmlLua PUBLIC lua_static)
 
 set_target_properties(RmlLua PROPERTIES
-		CXX_STANDARD 20
+		CXX_STANDARD 17
 		CXX_EXTENSIONS ON
 		)
