@@ -67,11 +67,18 @@ public:
 	ElementProgressBar(const String& tag);
 	virtual ~ElementProgressBar();
 
-	/// Return the value of the progress bar [0, 1]
+	/// Returns the value of the progress bar.
 	float GetValue() const;
-
-	/// Set the value of the progress bar
+	/// Sets the value of the progress bar.
 	void SetValue(float value);
+
+	/// Returns the maximum value of the progress bar.
+	float GetMax() const;
+	/// Sets the maximum value of the progress bar.
+	void SetMax(float max_value);
+
+	/// Returns the element's inherent size.
+	bool GetIntrinsicDimensions(Vector2f& dimensions, float& ratio) override;
 
 protected:
 	void OnRender() override;
@@ -94,8 +101,6 @@ private:
 
 	Direction direction;
 	StartEdge start_edge;
-
-	float value;
 
 	Element* fill;
 

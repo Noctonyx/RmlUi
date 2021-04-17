@@ -67,6 +67,7 @@ set(Core_HDR_FILES
     ${PROJECT_SOURCE_DIR}/Source/Core/LayoutInlineBoxText.h
     ${PROJECT_SOURCE_DIR}/Source/Core/LayoutLineBox.h
     ${PROJECT_SOURCE_DIR}/Source/Core/LayoutTable.h
+    ${PROJECT_SOURCE_DIR}/Source/Core/LayoutTableDetails.h
     ${PROJECT_SOURCE_DIR}/Source/Core/Memory.h
     ${PROJECT_SOURCE_DIR}/Source/Core/PluginRegistry.h
     ${PROJECT_SOURCE_DIR}/Source/Core/Pool.h
@@ -137,6 +138,7 @@ set(Core_PUB_HDR_FILES
     ${PROJECT_SOURCE_DIR}/Include/RmlUi/Core/ConvolutionFilter.h
     ${PROJECT_SOURCE_DIR}/Include/RmlUi/Core/Core.h
     ${PROJECT_SOURCE_DIR}/Include/RmlUi/Core/DataModelHandle.h
+    ${PROJECT_SOURCE_DIR}/Include/RmlUi/Core/DataStructHandle.h
     ${PROJECT_SOURCE_DIR}/Include/RmlUi/Core/DataTypeRegister.h
     ${PROJECT_SOURCE_DIR}/Include/RmlUi/Core/DataTypes.h
     ${PROJECT_SOURCE_DIR}/Include/RmlUi/Core/DataVariable.h
@@ -341,6 +343,7 @@ set(Core_SRC_FILES
     ${PROJECT_SOURCE_DIR}/Source/Core/LayoutInlineBoxText.cpp
     ${PROJECT_SOURCE_DIR}/Source/Core/LayoutLineBox.cpp
     ${PROJECT_SOURCE_DIR}/Source/Core/LayoutTable.cpp
+    ${PROJECT_SOURCE_DIR}/Source/Core/LayoutTableDetails.cpp
     ${PROJECT_SOURCE_DIR}/Source/Core/Log.cpp
     ${PROJECT_SOURCE_DIR}/Source/Core/Math.cpp
     ${PROJECT_SOURCE_DIR}/Source/Core/Memory.cpp
