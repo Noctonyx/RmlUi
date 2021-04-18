@@ -174,6 +174,7 @@ add_library(RmlCore STATIC
 		Source/Core/LayoutInlineBoxText.cpp
 		Source/Core/LayoutLineBox.cpp
 		Source/Core/LayoutTable.cpp
+		Source/Core/LayoutTableDetails.cpp
 		Source/Core/Log.cpp
 		Source/Core/Math.cpp
 		Source/Core/Memory.cpp
