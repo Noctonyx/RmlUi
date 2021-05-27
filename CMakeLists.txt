@@ -122,7 +122,7 @@ add_library(RmlCore STATIC
 		Source/Core/Elements/ElementFormControlTextArea.cpp
 		Source/Core/Elements/ElementImage.cpp
 		Source/Core/Elements/ElementLabel.cpp
-		Source/Core/Elements/ElementProgressBar.cpp
+		Source/Core/Elements/ElementProgress.cpp
 		Source/Core/Elements/ElementTabSet.cpp
 		Source/Core/Elements/ElementTextSelection.cpp
 		Source/Core/Elements/InputType.cpp
@@ -132,7 +132,6 @@ add_library(RmlCore STATIC
 		Source/Core/Elements/InputTypeRange.cpp
 		Source/Core/Elements/InputTypeSubmit.cpp
 		Source/Core/Elements/InputTypeText.cpp
-		Source/Core/Elements/SelectOption.cpp
 		Source/Core/Elements/WidgetDropDown.cpp
 		Source/Core/Elements/WidgetSlider.cpp
 		Source/Core/Elements/WidgetTextInput.cpp
@@ -141,6 +140,7 @@ add_library(RmlCore STATIC
 		Source/Core/Elements/WidgetTextInputSingleLinePassword.cpp
 		Source/Core/Elements/XMLNodeHandlerDataGrid.cpp
 		Source/Core/Elements/XMLNodeHandlerTabSet.cpp
+		Source/Core/Elements/XMLNodeHandlerSelect.cpp
 		Source/Core/Elements/XMLNodeHandlerTextArea.cpp
 		Source/Core/ElementScroll.cpp
 		Source/Core/ElementStyle.cpp
