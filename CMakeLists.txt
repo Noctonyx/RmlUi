@@ -64,6 +64,29 @@ set_target_properties(RmlLua PROPERTIES
 		CXX_EXTENSIONS ON
 		)
 
+add_library(RmlSVG STATIC
+		Source/SVG/ElementSVG.cpp
+		Source/SVG/SVGPlugin.cpp
+		)
+
+target_compile_features(RmlSVG PUBLIC cxx_std_17)
+#target_compile_options(RXUtil PUBLIC -DRX_ASSET_DIR="${PROJECT_SOURCE_DIR}/assets")
+
+if (MSVC)
+	target_compile_options(RmlSVG PRIVATE /W4 /wd4275 /wd4305 /wd4310 -D_CRT_SECURE_NO_WARNINGS -D_SILENCE_CXX17_OLD_ALLOCATOR_MEMBERS_DEPRECATION_WARNING -DWIN32_LEAN_AND_MEAN)
+endif ()
+
+target_compile_options(RmlSVG PUBLIC -DRMLUI_STATIC_LIB)
+
+target_include_directories(RmlSVG PUBLIC "Source/SVG" Include)
+
+target_link_libraries(RmlSVG PUBLIC lunasvg)
+
+set_target_properties(RmlSVG PROPERTIES
+		CXX_STANDARD 17
+		CXX_EXTENSIONS ON
+		)
+
 add_library(RmlCore STATIC
 		Source/Core/BaseXMLParser.cpp
 		Source/Core/Box.cpp
