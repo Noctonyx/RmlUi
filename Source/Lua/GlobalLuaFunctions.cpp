@@ -62,7 +62,7 @@ int LuaPrint(lua_State* L)
         output += String(s);
         lua_pop(L, 1);  /* pop result */
     }
-    output += "\n";
+    //output += "\n";
     Log::Message(Log::LT_INFO, "%s", output.c_str());
     return 0;
 }
